@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle</title>
+
+    <link rel="stylesheet" href="{% static 'css/recycle.css' %}">
+</head>
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="#" class="logo">Student</a>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'studentRecord' %}">StudentRecord</a></li>
+            <li><a href="{% url 'recycle' %}">Recycle</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Recycle Bin</h2>
+        {% if deleted_students %}
+        <table>
+            <thead>
+                <tr>
+                    <th>S.N.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in deleted_students %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.age }}</td>
+                    <td>{{ s.email }}</td>
+                    <td>
+                        <a href="{% url 'restore_student' s.id %}" class="restore-btn">Restore</a>
+                        <a href="{% url 'delete_data_Recycle' s.id %}"><button class="PermanentDelete">Permanent Delete</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No deleted students in recycle bin.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

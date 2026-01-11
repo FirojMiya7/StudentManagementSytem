@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record</title>
+
+    <link rel="stylesheet" href="{% static 'css/studentRecord.css' %}">
+</head>
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="#" class="logo">Student</a>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'studentRecord' %}">StudentRecord</a></li>
+            <li><a href="{% url 'recycle' %}">Recycle</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- yo registered students table -->
+
+    <main>
+        <h2>Registered Students</h2>
+        {% if students %}
+        <table>
+            <thead>
+                <tr>
+                    <th>S.N.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in students %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.age }}</td>
+                    <td>{{ s.email }}</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <a href="{% url 'delete_data' s.id %}"><button class="delete">Delete</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No students registered yet.</p>
+        {% endif %}
+    </main>
+
+    
+</body>
+</html>

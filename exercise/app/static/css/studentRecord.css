@@ -1,0 +1,96 @@
+/* navbar ko css */
+
+.navbar {
+    background-color: #333; /* Dark background */
+    color: white;
+    display: flex; /* Uses Flexbox for layout */
+    justify-content: space-between; /* Pushes logo to one end, links to the other */
+    align-items: center; /* Centers items vertically */
+    padding: 10px 20px;
+    /* position: fixed;  */
+    width: 97%;
+    top: 0;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block; /* Makes the entire link area clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-links li a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+    border-radius: 5px;
+}
+
+/* Student Record Styles */
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+.edit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.delete {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 8px;
+}
