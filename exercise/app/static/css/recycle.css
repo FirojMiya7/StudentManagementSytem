@@ -37,6 +37,12 @@
     border-radius: 5px;
 }
 
+
+
+
+
+
+
 /* Main content */
 main {
     padding: 30px 20px;
@@ -52,7 +58,7 @@ main h2 {
 
 /* Table styles */
 table {
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

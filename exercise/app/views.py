@@ -59,5 +59,3 @@ def delete_data_Recycle(request, id):
     student = Student.objects.get(id=id)
     student.delete()
     return redirect('recycle')
-    student.delete()
-    return redirect('recycle')
