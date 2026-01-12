@@ -116,3 +116,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' # Or your ESP's host, e.g., smtp.sendgrid.net
+EMAIL_PORT = 587 # Use 587 for TLS, or 465 for SSL
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'firojali723@gmail.com'
+# Use an App Password, not your main account password
+EMAIL_HOST_PASSWORD = 'kyls fttv jvnp wbqy'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER # The default sender address

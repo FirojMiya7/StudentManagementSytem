@@ -27,14 +27,20 @@ def register(request):
     return render(request, 'register.html')
 
 
-def recycle(request):
-    return render(request, 'recycle.html')
-
-
-
 def studentRecord(request):
     students = Student.objects.filter(is_deleted=False).order_by('name')
     return render(request, 'studentRecord.html', {'students': students})
+
+
+def edit_data(request, id):
+    student = Student.objects.get(id=id)
+    if request.method == 'POST':
+        student.name = request.POST.get('name')
+        student.age = request.POST.get('age')
+        student.email = request.POST.get('email')
+        student.save()
+        return redirect('studentRecord')
+    return render(request, 'edit.html', {'student': student})
 
 
 def delete_data(request, id):
@@ -59,3 +65,4 @@ def delete_data_Recycle(request, id):
     student = Student.objects.get(id=id)
     student.delete()
     return redirect('recycle')
+

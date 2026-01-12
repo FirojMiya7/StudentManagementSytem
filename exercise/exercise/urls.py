@@ -24,6 +24,7 @@ urlpatterns = [
     path('recycle/', views.recycle, name='recycle'),
     path('studentRecord/', views.studentRecord, name='studentRecord'),
     path('', views.home, name='home'),
+    path('edit/<int:id>/', views.edit_data, name='edit_data'),
     path('delete/<int:id>/', views.delete_data, name='delete_data'),
     path('restore/<int:id>/', views.restore_student, name='restore_student'),
     path('permanent-delete/<int:id>/', views.delete_data_Recycle, name='delete_data_Recycle'),

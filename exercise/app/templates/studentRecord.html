@@ -46,7 +46,7 @@
                     <td>{{ s.age }}</td>
                     <td>{{ s.email }}</td>
                     <td>
-                        <button class="edit">Edit</button>
+                        <a href="{% url 'edit_data' s.id %}"><button class="edit">Edit</button></a>
                         <a href="{% url 'delete_data' s.id %}"><button class="delete">Delete</button></a>
                     </td>
                 </tr>

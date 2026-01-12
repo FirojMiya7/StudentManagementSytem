@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+</head>
+<body>
+    
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="#" class="logo">Student</a>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'studentRecord' %}">StudentRecord</a></li>
+            <li><a href="{% url 'recycle' %}">Recycle</a></li>
+        </ul>
+    </nav>
+
+    <!-- Student edit form -->
+ 
+    <form class="form" method="post" action="{% url 'edit_data' student.id %}">
+        {% csrf_token %}
+        <p class="title">Edit Student </p>
+        <p class="message">Update student information. </p>
+        <div class="flex">
+            <label>
+                <input class="input" type="text" name="name" placeholder="" required="" id="nameInput" value="{{ student.name }}">
+                <span>Name</span>
+            </label>
+        </div> 
+
+        <label>
+            <input class="input" type="number" name="age" placeholder="" required="" min="1" value="{{ student.age }}">
+            <span>Age</span>
+        </label>
+        
+        <label>
+            <input class="input" type="email" name="email" placeholder="" required="" value="{{ student.email }}">
+            <span>Email</span>
+        </label> 
+
+        <button class="submit" type="submit">Update</button>
+        <p class="signin"><a href="{% url 'studentRecord' %}">Back to Records</a> </p>
+    </form>
+
+
+</body>
+</html>
