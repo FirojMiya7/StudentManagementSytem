@@ -1,0 +1,138 @@
+.navbar {
+    background-color: #333; /* Dark background */
+    color: white;
+    display: flex; /* Uses Flexbox for layout */
+    justify-content: space-between; /* Pushes logo to one end, links to the other */
+    align-items: center; /* Centers items vertically */
+    padding: 10px 20px;
+    /* position: fixed;  */
+    width: 97%;
+    top: 0;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block; /* Makes the entire link area clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-links li a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+    border-radius: 5px;
+}
+
+
+
+
+
+/* From Uiverse.io by bociKond */ 
+.form-box {
+  max-width: 300px;
+  background: #285890;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #285890;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background-color: #e0ecfb;
+  border: none;
+  border-radius: 1rem;
+  outline: 0;
+  height: 40px;
+  width: 88%;
+  /* border: 1px solid #eee; */
+  font-size: .9rem;
+  margin: 3px 3px 3px 3px;
+  padding: 5px 12px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+  color: #000000;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #000000;
+  transition: color .3s ease;
+  text-decoration: none;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #065de0;
+  color: #ffffff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.form button:hover {
+  background-color: #5b9dff;
+  color: #000000;
+}

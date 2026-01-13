@@ -15,16 +15,18 @@
     <nav class="navbar">
         <a href="#" class="logo">Student</a>
         <ul class="nav-links">
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Signup</a></li>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'studentRecord' %}">StudentRecord</a></li>
-            <li><a href="{% url 'recycle' %}">Recycle</a></li>
+            <!-- <li><a href="{% url 'register' %}">Register</a></li> -->
+            <!-- <li><a href="{% url 'studentRecord' %}">StudentRecord</a></li> -->
+            <!-- <li><a href="{% url 'recycle' %}">Recycle</a></li> -->
         </ul>
     </nav>
 
     <div class="HomePage">
         <img src="{% static 'images/homePage.png' %}" class="homepageImg" style="position: relative;">
-        <a href="{% url 'register' %}" class="getstarted" >Get Started ></a>
+        <a href="{% url 'signup' %}" class="getstarted" >Get Started ></a>
 
         <!-- yo chaii tyaha photo ma bhako logo lukauna lai banako white box ho -->
         <div class="whiteBox"></div>

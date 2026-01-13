@@ -6,16 +6,17 @@
     display: flex; /* Uses Flexbox for layout */
     justify-content: space-between; /* Pushes logo to one end, links to the other */
     align-items: center; /* Centers items vertically */
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     /* position: fixed;  */
     width: 97%;
     top: 0;
 }
 
 .logo {
+    margin-left: 4rem;
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -27,7 +28,8 @@
 .nav-links li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 0.1rem 0.9rem;
+    font-size: 1.5rem;
     display: block; /* Makes the entire link area clickable */
     transition: background-color 0.3s; /* Smooth transition for hover */
 }
@@ -36,6 +38,11 @@
     background-color: #555; /* Slightly lighter background on hover */
     border-radius: 5px;
 }
+
+
+
+
+
 
 /* Student Record Styles */
 

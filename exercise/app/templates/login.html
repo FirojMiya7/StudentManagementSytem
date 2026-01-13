@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="#" class="logo">Student</a>
+        <ul class="nav-links">
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Sign up</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <!-- <li><a href="{% url 'register' %}">Register</a></li> -->
+            <!-- <li><a href="{% url 'studentRecord' %}">StudentRecord</a></li> -->
+            <!-- <li><a href="{% url 'recycle' %}">Recycle</a></li> -->
+        </ul>
+    </nav>
+
+
+    <!-- login section -->
+ 
+ <!-- From Uiverse.io by bociKond --> 
+<div class="form-box">
+<form class="form" method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+    <span class="title">Login</span>
+    <span class="subtitle">Please enter your credentials to log in.</span>
+    <div class="form-container">
+			<input type="email" class="input" placeholder="Email">
+			<input type="password" class="input" placeholder="Password">
+    </div>
+    <button>Login</button>
+</form>
+<div class="form-section">
+  <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a> </p>
+</div>
+</div>
+
+
+
+</body>
+</html>
